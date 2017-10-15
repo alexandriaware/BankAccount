@@ -31,5 +31,9 @@ namespace BankAccount
                 Console.WriteLine("Insufficient funds, Mr. Potter.");
             }
         }
+        public override void Deposit(float input)
+        {
+            base.Deposit(input);
+        }
     }
 }
