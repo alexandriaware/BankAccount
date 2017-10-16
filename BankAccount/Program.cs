@@ -19,6 +19,8 @@ namespace BankAccount
             float input; //store input numbers
 
             string selection;
+
+            Console.WriteLine("Welcome to Gringott's Bank, sir. How may I be of service?");
             
 
             do
@@ -56,7 +58,7 @@ namespace BankAccount
                         {
                             main.ValidationMenu();
                         }
-                    } while (selection != "1" || selection == "2");
+                    } while (selection != "1" && selection != "2");
                 }
                 else if (selection == "3") //Deposit funds
                 {
@@ -84,7 +86,7 @@ namespace BankAccount
                         {
                             main.ValidationMenu();
                         }
-                    } while (selection != "1" || selection == "2");
+                    } while (selection != "1" && selection != "2");
 
                 }
                 else if (selection == "4") //Withdraw funds
@@ -114,7 +116,7 @@ namespace BankAccount
                             main.ValidationMenu();
                         }
 
-                    } while (selection != "1" || selection == "2");                   
+                    } while (selection != "1" && selection != "2");                   
 
                 }
 
