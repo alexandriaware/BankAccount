@@ -31,7 +31,8 @@ namespace BankAccount
                 if (selection == "1") //client info
                 {
                     Console.WriteLine(potter.GetInfo());
-                    
+                    Console.WriteLine("\nCan I do anything else for you, sir?\n");
+
                 }
                 else if (selection == "2") //Acct balance
                 {
@@ -41,10 +42,12 @@ namespace BankAccount
                     if (selection == "1") //Show checking balance
                     {
                         Console.WriteLine("Your Checking Account balance is : $" + check.acctBalance);
+                        Console.WriteLine("\nCan I do anything else for you, sir?\n");
                     }
                     else if (selection == "2") //show savings balance
                     {
                         Console.WriteLine("Your Savings Account balance is: $" + save.acctBalance);
+                        Console.WriteLine("\nCan I do anything else for you, sir?\n");
                     }
                     else
                     {
@@ -61,14 +64,16 @@ namespace BankAccount
                         Console.WriteLine("Please enter the amount you'd like to deposit.");
                         input = float.Parse(Console.ReadLine());
                         check.Deposit(input);
-                        Console.WriteLine("Your new Checking Account balance is : $" + check.acctBalance);
+                        Console.WriteLine("Your Checking Account balance is : $" + check.acctBalance);
+                        Console.WriteLine("\nCan I do anything else for you, sir?\n");
                     }
                     else if (selection == "2") //Deposit to savings
                     {
                         Console.WriteLine("Please enter the amount you'd like to deposit.");
                         input = float.Parse(Console.ReadLine());
                         save.Deposit(input);
-                        Console.WriteLine("Your new Savings Account balance is: $" + save.acctBalance);
+                        Console.WriteLine("Your Savings Account balance is: $" + save.acctBalance);
+                        Console.WriteLine("\nCan I do anything else for you, sir?\n");
                     }
                     else
                     {
@@ -86,14 +91,16 @@ namespace BankAccount
                         Console.WriteLine("Please enter the amount you'd like to withdraw.");
                         input = float.Parse(Console.ReadLine());
                         check.Withdraw(input);
-                        Console.WriteLine("Your new Checking Account balance is : $" + check.acctBalance);
+                        Console.WriteLine("Your Checking Account balance is : $" + check.acctBalance);
+                        Console.WriteLine("\nCan I do anything else for you, sir?\n");
                     }
                     else if (selection == "2") //Withdraw from savings
                     {
                         Console.WriteLine("Please enter the amount you'd like to withdraw.");
                         input = float.Parse(Console.ReadLine());
                         save.Withdraw(input);
-                        Console.WriteLine("Your new Savings Account balance is: $" + save.acctBalance);
+                        Console.WriteLine("Your Savings Account balance is: $" + save.acctBalance);
+                        Console.WriteLine("\nCan I do anything else for you, sir?\n");
                     }
                     else
                     {
@@ -102,7 +109,9 @@ namespace BankAccount
                     }
 
                 }
+
             } while (selection != "5");
+            
 
             {
                 Console.WriteLine("Pleasure doing business with you, Mr. Potter.");

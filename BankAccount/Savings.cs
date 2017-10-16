@@ -28,13 +28,14 @@ namespace BankAccount
         //Method
         public override void Withdraw(float input)
         {
-            if (input >= minimumBalance)
+            if (input >= acctBalance - minimumBalance)
             {
-                acctBalance = acctBalance - input;
+                Console.WriteLine("Insufficient funds, Mr. Potter.");
+                Console.WriteLine("You only have $15000.00");
             }
             else
             {
-                Console.WriteLine("Insufficient funds, Mr. Potter.");
+                acctBalance = acctBalance - input;
             }
         }
         
