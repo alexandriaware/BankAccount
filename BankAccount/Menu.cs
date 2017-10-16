@@ -28,8 +28,8 @@ namespace BankAccount
         public void ValidationMenu()
         {
             Console.WriteLine("Please make a valid selection: enter 1 or 2");
-            Console.WriteLine("1. Checking Account");
-            Console.WriteLine("2. Savings Account");
+            //Console.WriteLine("1. Checking Account");
+            //Console.WriteLine("2. Savings Account");
         }
     }
 }

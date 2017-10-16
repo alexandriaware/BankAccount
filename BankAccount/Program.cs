@@ -36,77 +36,85 @@ namespace BankAccount
                 }
                 else if (selection == "2") //Acct balance
                 {
-                    main.AccountMenu();
-                    selection = Console.ReadLine().Trim();
-
-                    if (selection == "1") //Show checking balance
+                    do
                     {
-                        Console.WriteLine("Your Checking Account balance is : $" + check.acctBalance);
-                        Console.WriteLine("\nCan I do anything else for you, sir?\n");
-                    }
-                    else if (selection == "2") //show savings balance
-                    {
-                        Console.WriteLine("Your Savings Account balance is: $" + save.acctBalance);
-                        Console.WriteLine("\nCan I do anything else for you, sir?\n");
-                    }
-                    else
-                    {
-                        main.ValidationMenu();
+                        main.AccountMenu();
                         selection = Console.ReadLine().Trim();
-                    }
+
+
+                        if (selection == "1") //Show checking balance
+                        {
+                            Console.WriteLine("Your Checking Account balance is : $" + check.acctBalance);
+                            Console.WriteLine("\nCan I do anything else for you, sir?\n");
+                        }
+                        else if (selection == "2") //show savings balance
+                        {
+                            Console.WriteLine("Your Savings Account balance is: $" + save.acctBalance);
+                            Console.WriteLine("\nCan I do anything else for you, sir?\n");
+                        }
+                        else
+                        {
+                            main.ValidationMenu();
+                        }
+                    } while (selection != "1" || selection == "2");
                 }
                 else if (selection == "3") //Deposit funds
                 {
-                    main.AccountMenu();
-                    selection = Console.ReadLine().Trim();
-                    if (selection == "1") //Deposit to checking
+                    do
                     {
-                        Console.WriteLine("Please enter the amount you'd like to deposit.");
-                        input = float.Parse(Console.ReadLine());
-                        check.Deposit(input);
-                        Console.WriteLine("Your Checking Account balance is : $" + check.acctBalance);
-                        Console.WriteLine("\nCan I do anything else for you, sir?\n");
-                    }
-                    else if (selection == "2") //Deposit to savings
-                    {
-                        Console.WriteLine("Please enter the amount you'd like to deposit.");
-                        input = float.Parse(Console.ReadLine());
-                        save.Deposit(input);
-                        Console.WriteLine("Your Savings Account balance is: $" + save.acctBalance);
-                        Console.WriteLine("\nCan I do anything else for you, sir?\n");
-                    }
-                    else
-                    {
-                        main.ValidationMenu();
+                        main.AccountMenu();
                         selection = Console.ReadLine().Trim();
-                    }
+                        if (selection == "1") //Deposit to checking
+                        {
+                            Console.WriteLine("Please enter the amount you'd like to deposit.");
+                            input = float.Parse(Console.ReadLine());
+                            check.Deposit(input);
+                            Console.WriteLine("Your Checking Account balance is : $" + check.acctBalance);
+                            Console.WriteLine("\nCan I do anything else for you, sir?\n");
+                        }
+                        else if (selection == "2") //Deposit to savings
+                        {
+                            Console.WriteLine("Please enter the amount you'd like to deposit.");
+                            input = float.Parse(Console.ReadLine());
+                            save.Deposit(input);
+                            Console.WriteLine("Your Savings Account balance is: $" + save.acctBalance);
+                            Console.WriteLine("\nCan I do anything else for you, sir?\n");
+                        }
+                        else
+                        {
+                            main.ValidationMenu();
+                        }
+                    } while (selection != "1" || selection == "2");
 
                 }
                 else if (selection == "4") //Withdraw funds
                 {
-                    main.AccountMenu();
-                    selection = Console.ReadLine().Trim();
-                    if (selection == "1") //Withdraw from checking
+                    do
                     {
-                        Console.WriteLine("Please enter the amount you'd like to withdraw.");
-                        input = float.Parse(Console.ReadLine());
-                        check.Withdraw(input);
-                        Console.WriteLine("Your Checking Account balance is : $" + check.acctBalance);
-                        Console.WriteLine("\nCan I do anything else for you, sir?\n");
-                    }
-                    else if (selection == "2") //Withdraw from savings
-                    {
-                        Console.WriteLine("Please enter the amount you'd like to withdraw.");
-                        input = float.Parse(Console.ReadLine());
-                        save.Withdraw(input);
-                        Console.WriteLine("Your Savings Account balance is: $" + save.acctBalance);
-                        Console.WriteLine("\nCan I do anything else for you, sir?\n");
-                    }
-                    else
-                    {
-                        main.ValidationMenu();
+                        main.AccountMenu();
                         selection = Console.ReadLine().Trim();
-                    }
+                        if (selection == "1") //Withdraw from checking
+                        {
+                            Console.WriteLine("Please enter the amount you'd like to withdraw.");
+                            input = float.Parse(Console.ReadLine());
+                            check.Withdraw(input);
+                            Console.WriteLine("Your Checking Account balance is : $" + check.acctBalance);
+                            Console.WriteLine("\nCan I do anything else for you, sir?\n");
+                        }
+                        else if (selection == "2") //Withdraw from savings
+                        {
+                            Console.WriteLine("Please enter the amount you'd like to withdraw.");
+                            input = float.Parse(Console.ReadLine());
+                            save.Withdraw(input);
+                            Console.WriteLine("Your Savings Account balance is: $" + save.acctBalance);
+                            Console.WriteLine("\nCan I do anything else for you, sir?\n");
+                        }
+                        else
+                        {
+                            main.ValidationMenu();
+                        }
+
+                    } while (selection != "1" || selection == "2");                   
 
                 }
 
