@@ -31,7 +31,7 @@ namespace BankAccount
             if (input > acctBalance - minimumBalance)
             {
                 Console.WriteLine("Insufficient funds, Mr. Potter.");
-                Console.WriteLine("You only have $15000.00, and you must keep $10.00 in your account.");
+                Console.WriteLine("You only have $" + acctBalance + ", and you must keep $10.00 in your account.");
             }
             else
             {
